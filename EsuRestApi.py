@@ -1330,7 +1330,7 @@ class EsuException(Exception):
         self.atmos_error_code = atmos_error.code.text
         self.atmos_error_message = atmos_error.message.text
     def __str__(self):
-        return repr(self)
+        return 'ATMOS Error %s (HTTP %s): %s' % (self.atmos_error_code, self.http_code, self.atmos_error_message)
 
 #TODO:
   
